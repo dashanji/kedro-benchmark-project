@@ -18,7 +18,6 @@ USER kedro_docker
 
 FROM runtime-environment
 
-# copy the whole project except what is in .dockerignore
 ARG KEDRO_UID=999
 ARG KEDRO_GID=0
 COPY --chown=${KEDRO_UID}:${KEDRO_GID} . .

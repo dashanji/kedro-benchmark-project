@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: vineyard_benchmark-
+  generateName: vineyard-benchmark-
 spec:
   entrypoint: dag
   templates:
