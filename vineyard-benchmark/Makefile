@@ -13,6 +13,8 @@ build-images-with-100m-data:
 	docker build -t vineyard-benchmark-with-100m-data:latest -f Dockerfile .
 
 build-images-with-500m-data:
+	cat data/01_raw/train-500MB-seg-* > data/01_raw/train-500MB.csv
+	rm -f data/01_raw/train-500MB-seg-*
 	cp data/01_raw/train-500MB.csv data/01_raw/train.csv
 	docker build -t vineyard-benchmark-with-500m-data:latest -f Dockerfile .
 
